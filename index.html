@@ -1,106 +1,126 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV - Biodata Pribadi</title>
+  <title>CV - Biodata</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      color: #333;
     }
+
     .container {
-      max-width: 900px;
-      margin: auto;
+      max-width: 800px;
+      margin: 50px auto;
       background: white;
       padding: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      border-radius: 12px;
     }
-    .header {
+
+    header {
       text-align: center;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 20px;
+      background-color: #f9c846;
+      padding: 20px;
+      border-radius: 8px;
     }
-    .header h1 {
+
+    header h1 {
       margin: 0;
+      font-size: 2.5rem;
+      color: #222;
     }
-    .section {
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 8px;
+      color: #444;
+    }
+
+    section {
       margin-top: 30px;
     }
-    .section h2 {
-      background: #333;
-      color: white;
-      padding: 10px;
-      margin-bottom: 15px;
+
+    h2 {
+      color: #f79c00;
+      border-bottom: 2px solid #f79c00;
+      padding-bottom: 5px;
     }
+
     ul {
-      padding-left: 20px;
+      list-style-type: none;
+      padding: 0;
     }
-    .profile-pic {
-      width: 120px;
-      border-radius: 50%;
-      margin: 20px auto;
-      display: block;
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 10px;
+      background-color: #f9c846;
+      border-radius: 6px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <img src="https://via.placeholder.com/120" alt="Foto Profil" class="profile-pic">
+    <header>
       <h1>Nama Lengkap</h1>
-      <p>Email: email@example.com | Telp: 0812-3456-7890</p>
-      <p>Alamat: Jalan Contoh No. 123, Kota, Negara</p>
-    </div>
+      <p>Web Developer | Graphic Designer | Content Creator</p>
+    </header>
 
-    <div class="section">
-      <h2>Profil Singkat</h2>
-      <p>Saya adalah lulusan SMK yang memiliki semangat tinggi, berorientasi pada hasil, dan memiliki ketertarikan dalam bidang teknologi dan desain web. Mampu bekerja secara individu maupun tim.</p>
-    </div>
+    <section class="about">
+      <h2>Tentang Saya</h2>
+      <p>
+        Saya adalah lulusan SMK jurusan Rekayasa Perangkat Lunak yang antusias dalam dunia teknologi dan desain.
+        Memiliki pengalaman dalam membuat website, serta kemampuan komunikasi yang baik.
+      </p>
+    </section>
 
-    <div class="section">
-      <h2>Pendidikan</h2>
+    <section class="info">
+      <h2>Informasi Pribadi</h2>
       <ul>
-        <li>SMK Negeri 1 Kota Contoh (2021 - 2024) - Jurusan Rekayasa Perangkat Lunak</li>
+        <li><strong>Alamat:</strong> Jl. Merdeka No. 123</li>
+        <li><strong>Email:</strong> email@example.com</li>
+        <li><strong>No HP:</strong> 0812-3456-7890</li>
+        <li><strong>Tanggal Lahir:</strong> 1 Januari 2005</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
-      <h2>Pengalaman Kerja/Magang</h2>
-      <ul>
-        <li>PT Teknologi Maju (Magang, Jan 2023 - Jun 2023)
-          <ul>
-            <li>Mengembangkan dan menguji website internal perusahaan</li>
-            <li>Bekerja sama dalam tim menggunakan Git dan Trello</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Kemampuan</h2>
+    <section class="skills">
+      <h2>Keahlian</h2>
       <ul>
         <li>HTML, CSS, JavaScript</li>
-        <li>Desain UI/UX menggunakan Figma</li>
-        <li>Komunikasi dan kerja tim</li>
+        <li>Canva & Adobe Photoshop</li>
+        <li>Public Speaking</li>
+        <li>Microsoft Office</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
-      <h2>Bahasa</h2>
+    <section class="education">
+      <h2>Pendidikan</h2>
       <ul>
-        <li>Bahasa Indonesia (aktif)</li>
-        <li>Bahasa Inggris (pasif)</li>
+        <li>SMK Negeri 1 Kota | RPL | 2021 - 2024</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
-      <h2>Referensi</h2>
-      <p>Referensi tersedia atas permintaan.</p>
-    </div>
+    <section class="experience">
+      <h2>Pengalaman</h2>
+      <ul>
+        <li>Magang di PT. Webindo sebagai Front-End Developer (3 bulan)</li>
+        <li>Freelance desain poster dan media sosial</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2024 Nama Lengkap. All rights reserved.</p>
+    </footer>
   </div>
 </body>
 </html>
