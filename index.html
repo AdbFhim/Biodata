@@ -1,30 +1,41 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV - Biodata</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV - Nama Lengkap</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       background: linear-gradient(to right, #fceabb, #f8b500);
       color: #333;
+      scroll-behavior: smooth;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 850px;
       margin: 50px auto;
-      background: white;
+      background: #fff;
       padding: 30px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
       border-radius: 12px;
     }
 
     header {
       text-align: center;
       background-color: #f9c846;
-      padding: 20px;
+      padding: 25px 20px;
       border-radius: 8px;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #fff;
     }
 
     header h1 {
@@ -34,7 +45,7 @@
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin-top: 8px;
       color: #444;
     }
@@ -46,7 +57,8 @@
     h2 {
       color: #f79c00;
       border-bottom: 2px solid #f79c00;
-      padding-bottom: 5px;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
     }
 
     ul {
@@ -58,29 +70,61 @@
       margin-bottom: 10px;
     }
 
+    .socials a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #f79c00;
+      font-weight: bold;
+    }
+
+    .download {
+      display: inline-block;
+      margin-top: 20px;
+      background: #f79c00;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .download:hover {
+      background: #e39300;
+    }
+
     footer {
       text-align: center;
-      margin-top: 40px;
-      padding: 10px;
+      margin-top: 50px;
+      padding: 15px;
       background-color: #f9c846;
       border-radius: 6px;
+    }
+
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
+      <img src="ADIB FAHIM.jpg" alt="Foto Profil"/>
       <h1>Adib Fahim</h1>
       <p>Web Developer | Graphic Designer | Content Creator</p>
+      <div class="socials">
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+        <a href="#">GitHub</a>
+      </div>
+      <a class="download" href="#" onclick="window.print()">Cetak / Unduh PDF</a>
     </header>
-
-    <section class="about">
-      <h2>Tentang Saya</h2>
-      <p>
-        Saya adalah lulusan SMK jurusan Rekayasa Perangkat Lunak yang antusias dalam dunia teknologi dan desain.
-        Memiliki pengalaman dalam membuat website, serta kemampuan komunikasi yang baik.
-      </p>
-    </section>
 
     <section class="info">
       <h2>Informasi Pribadi</h2>
@@ -118,7 +162,7 @@
     </section>
 
     <footer>
-      <p>© 2025 AdibFahim. All rights reserved.</p>
+      <p>© 2025 Adib Fahim. Dibuat dengan semangat 💛</p>
     </footer>
   </div>
 </body>
