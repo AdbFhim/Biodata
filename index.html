@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CV-AdibFahim</title>
+  <title>Interactive CV</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -148,12 +148,126 @@
       background: #002f4a;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #0a0f3d;
-      color: white;
-    }
+  body.dark-mode blockquote {
+    background: #2e2e42;
+    color: #e0e0e0;
+    border-left: 5px solid #00c9ff;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .project img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+  }
+
+/* Switch Container */
+.switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  z-index: 1001;
+}
+
+/* Hide default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider styling */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* When checked */
+input:checked + .slider {
+  background-color: #00416a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(28px);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #1e1e2f;
+  color: #f0f0f0;
+}
+
+body.dark-mode nav,
+body.dark-mode footer {
+  background: #121223;
+}
+
+body.dark-mode h2,
+body.dark-mode h1,
+body.dark-mode a {
+  color: #00c9ff;
+}
+
+body.dark-mode .bar span {
+  background: #00c9ff;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #2e2e42;
+  color: white;
+  border-color: #444;
+}
+
+#backTop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  background-color: #00416a;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+#backTop:hover {
+  background-color: #002f4a;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0a0f3d;
+  color: white;
+}
 
     /* Animation */
     .animate {
@@ -182,11 +296,23 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="#social">Social</a></li>
+      <li><a href="#languages">Languages</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#stats">Stats</a></li>
+      <li><a href="#location">Location</a></li>
       <li><a href="#contact">Contact</a></li>
+      <label class="switch">
+        <input type="checkbox" id="darkToggle" onclick="toggleDarkMode()" />
+        <span class="slider"></span>
+      </label>
+      
     </ul>
   </nav>
 
-
+  
   <header>
     <h1>Hello, I'm <span>Adib Fahim</span></h1>
     <p>Web Developer | Editor Video | Network Engineer</p>
@@ -199,7 +325,7 @@
   </section>
 
   <section id="about" class="animate">
-    <h2>Informasi Pribadi</h2>
+    <h2>Personal Information</h2>
     <table class="info-table">
       <tr><td class="label">Date of Birth</td><td>: 27 April 2007</td></tr>
       <tr><td class="label">Blood Type</td><td>: AB+</td></tr>
@@ -257,6 +383,83 @@
     <p><strong>Graduates of Vocational High School 1 Bukittingi </strong><br>2022 - 2025</p>
   </section>
 
+  <section id="social" class="animate">
+    <h2>Social Links</h2>
+    <p>
+      <a href="https://linkedin.com/in/adibfahim" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/adibfahim" target="_blank">GitHub</a> |
+      <a href="https://instagram.com/adibfahim" target="_blank">Instagram</a>
+    </p>
+  </section>
+
+  <section id="languages" class="animate">
+    <h2>Languages</h2>
+    <ul>
+      <li>Bahasa Indonesia (Native)</li>
+      <li>English (Intermediate)</li>
+      <li>Japanese (Basic)</li>
+    </ul>
+  </section>
+
+  <section id="certificates" class="animate">
+    <h2>Certificates</h2>
+    <ul>
+      <li>Dicoding - Front-End Web Developer (2024)</li>
+      <li>freeCodeCamp - JavaScript Algorithms (2023)</li>
+      <li>Telkom Internship Completion Certificate (2024)</li>
+    </ul>
+  </section>
+
+  <section id="portfolio" class="animate">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="project">
+        <img src="Foto1.png" alt="Project 1">
+        <h3>Editing Photos</h3>
+        <p>create beautiful wallpaper/scenery images from AI applications and edit them with photo editing applications</p>
+      </div>
+      <div class="project">
+        <img src="Foto2.png" alt="Project 2">
+        <h3>Create a Website</h3>
+        <p>Able to create website displays based on HTML, CSS and JavaScript</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="testimonials" class="animate">
+    <h2>Testimonials</h2>
+    <blockquote>
+      "Adib is a highly motivated and creative individual. His ability to solve problems and present ideas visually is impressive." 
+      <br><strong>– Mentor at TELKOM Internship</strong>
+    </blockquote>
+  </section>
+  
+  <style>
+    blockquote {
+      background: #f1f1f1;
+      padding: 20px;
+      border-left: 5px solid #00416a;
+      font-style: italic;
+      margin: 20px 0;
+    }
+  </style>
+  
+
+  <section id="stats" class="animate">
+    <h2>My Stats</h2>
+    <div style="display: flex; justify-content: space-around;">
+      <div><h3><span id="projects">0</span>+</h3><p>Projects</p></div>
+      <div><h3><span id="clients">0</span>+</h3><p>Clients</p></div>
+      <div><h3><span id="certs">0</span>+</h3><p>Certificates</p></div>
+    </div>
+  </section>
+  
+  <section id="location" class="animate">
+    <h2>My Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=YOUR_LOCATION_HERE" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+  
+
   <!-- Contact -->
   <section id="contact" class="animate">
     <h2>Contact Me</h2>
@@ -267,6 +470,65 @@
       <button type="submit">Send</button>
     </form>
   </section>
+
+  <button onclick="topFunction()" id="backTop" title="Go to top">↑</button>
+  
+  <script>
+    function animateValue(id, start, end, duration) {
+      let obj = document.getElementById(id);
+      let range = end - start;
+      let current = start;
+      let increment = end > start ? 1 : -1;
+      let stepTime = Math.abs(Math.floor(duration / range));
+  
+      let timer = setInterval(function () {
+        current += increment;
+        obj.textContent = current;
+        if (current == end) clearInterval(timer);
+      }, stepTime);
+    }
+  
+    window.addEventListener("load", function() {
+      animateValue("projects", 0, 21, 1000);
+      animateValue("clients", 0, 1, 1000);
+      animateValue("certs", 0, 3, 1000);
+    });
+  </script>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+  
+      // Optional: Simpan preferensi ke localStorage
+      const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
+      localStorage.setItem("theme", mode);
+    }
+  
+    // Aktifkan dark mode jika sebelumnya dipilih
+    window.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    });
+  </script>
+  
+
+<script>
+  const backTopBtn = document.getElementById("backTop");
+
+  window.onscroll = function() {
+    backTopBtn.style.display = (document.documentElement.scrollTop > 300) ? "block" : "none";
+  };
+
+  function topFunction() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+</script>
+
 
   <!-- Footer -->
   <footer>
