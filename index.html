@@ -184,6 +184,33 @@
   border: 0;
 }
 
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+  background-color: #e0e0e0;
+}
+
+.social-links svg {
+  width: 24px;
+  height: 24px;
+}
 
 .switch {
   position: fixed;
@@ -411,11 +438,27 @@ footer {
 
   <section id="social" class="animate">
     <h2>Social Links</h2>
-    <p>
-      <a href="https://linkedin.com/in/adibfahim" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/adibfahim" target="_blank">GitHub</a> |
-      <a href="https://instagram.com/adibfahim" target="_blank">Instagram</a>
-    </p>
+    <div class="social-links">
+      <p>Find me on:</p>
+      <a href="https://github.com/AdbFhim" target="_blank" title="GitHub" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" viewBox="0 0 24 24">
+          <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 10.95c.6.1.82-.25.82-.57v-2.04c-3.26.7-3.95-1.4-3.95-1.4a3.1 3.1 0 00-1.32-1.73c-1.1-.74.08-.73.08-.73a2.45 2.45 0 011.8 1.2 2.5 2.5 0 003.43 1 2.5 2.5 0 01.75-1.56c-2.6-.3-5.34-1.3-5.34-5.86a4.6 4.6 0 011.22-3.2 4.3 4.3 0 01.12-3.15s.99-.3 3.24 1.22a11.1 11.1 0 015.9 0c2.25-1.52 3.24-1.22 3.24-1.22.64 1.61.24 2.8.12 3.15a4.6 4.6 0 011.22 3.2c0 4.58-2.74 5.56-5.35 5.85a2.8 2.8 0 01.8 2.18v3.23c0 .32.21.68.83.57A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
+        </svg>
+      </a>
+    
+      <a href="https://wa.me/6282171548805" target="_blank" title="WhatsApp" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#25D366" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163a11.945 11.945 0 01-1.62-6.001C.122 5.352 5.49 0 12.062 0c3.193 0 6.188 1.24 8.438 3.488a11.824 11.824 0 013.5 8.41c-.003 6.574-5.37 11.94-11.941 11.94a11.93 11.93 0 01-6.01-1.615L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.423 1.593h.005c5.448 0 9.89-4.435 9.893-9.884.002-5.462-4.43-9.896-9.893-9.896-5.463 0-9.899 4.435-9.899 9.896a9.82 9.82 0 001.625 5.292l-1.086 3.975 3.032-.97zm11.387-5.464c-.17-.085-1.007-.497-1.163-.553-.156-.057-.27-.085-.384.085s-.441.553-.54.668c-.1.114-.2.128-.371.043-.17-.085-.717-.264-1.364-.842-.504-.45-.844-1.004-.943-1.174-.1-.17-.01-.262.075-.347.077-.076.17-.2.256-.3.086-.1.114-.17.17-.284.057-.113.028-.213-.014-.298-.043-.085-.384-.927-.527-1.27-.14-.342-.284-.295-.384-.3h-.328c-.1 0-.27.04-.413.185-.143.143-.54.528-.54 1.285s.553 1.49.63 1.59c.085.1 1.09 1.665 2.64 2.335.37.16.657.256.882.327.37.114.705.098.97.06.296-.044.906-.37 1.034-.728.127-.36.127-.668.09-.728-.037-.057-.156-.1-.327-.185z"/>
+        </svg>
+      </a>
+    
+      <a href="https://www.tiktok.com/@adibfahim1212" target="_blank" title="TikTok" aria-label="TikTok">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 24 24">
+          <path d="M16.9 1H13v15.5c0 1.4-1.1 2.5-2.5 2.5S8 17.9 8 16.5 9.1 14 10.5 14c.5 0 1 .2 1.4.4V11c-.5-.1-1-.1-1.4-.1-3.6 0-6.5 2.9-6.5 6.5S6.4 24 10 24s6.5-2.9 6.5-6.5V8.6c1 .8 2.3 1.4 3.5 1.4V6.5c-1.8 0-3.1-1.5-3.1-3.5V1z"/>
+        </svg>
+      </a>
+    </div>
+    
   </section>
 
   <section id="languages" class="animate">
